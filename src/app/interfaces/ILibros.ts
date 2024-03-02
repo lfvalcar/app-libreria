@@ -1,4 +1,4 @@
-export interface ILibros {
+export interface ILibro {
     isbn:             string;
     title:            string;
     pageCount:        number;

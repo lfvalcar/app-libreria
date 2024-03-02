@@ -7,7 +7,7 @@ export interface ICategoria {
     logo: string;
 }
 
-const ColumnCagoria:IColumn[] = [
+const ColumnCategoria:IColumn[] = [
     {
         key: "name",
         label: "NOMBRE"
@@ -21,3 +21,5 @@ const ColumnCagoria:IColumn[] = [
         label: "IMAGEN"
     }
 ];
+
+export default ColumnCategoria
