@@ -1,16 +1,16 @@
 import React from 'react'
-import { ILibros } from '@/app/interfaces/ILibros'
+import { ILibro } from '@/app/interfaces/ILibros'
 import { getLibros } from '@/app/model/dataLibro'
 import ColumnLibro from '@/app/interfaces/ILibros'
-import { Tabla } from '@/app/components/commons/Tabla/Tabla'
+import CardLibroList from '@/app/components/public/libros/Cards/CardLibroList'
 
 const PageLibros = async () => {
-const libros: ILibros[] = await getLibros()
+const libros: ILibro[] = await getLibros()
 
   return (
     <>
-      <h1>Sección de libros</h1>
-      <Tabla rows={libros} columns={ColumnLibro} />
+      <h1>Sección de Libros</h1>
+      <CardLibroList libros={libros}/>
     </>
   )
 }

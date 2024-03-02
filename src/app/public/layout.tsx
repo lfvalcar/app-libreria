@@ -1,6 +1,8 @@
 import { IChildren } from "../interfaces/IChildren";
 import { Menu } from "@/app/components/commons/Menu";
 import { ILink } from "../interfaces/ILinks";
+import HeaderPublic from "../components/public/HeaderPublic";
+import FooterPublic from "../components/public/FooterPublic";
 
 export default function PublicLayout({ children }: IChildren,) {
   const links:ILink[] = [
@@ -12,12 +14,12 @@ export default function PublicLayout({ children }: IChildren,) {
 
   return (
     <>
-      <header>
-        <Menu links = {links}/>
-      </header>
+      <HeaderPublic/>
+      <Menu links = {links}/>
       <main>
         { children }
       </main>
+      <FooterPublic />
     </>
   );
 }
