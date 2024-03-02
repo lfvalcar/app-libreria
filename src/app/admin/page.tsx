@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Admin = () => {
+const PageAdmin = () => {
   return (
     <h1>Página Principal Backend</h1>
   )
 }
 
-export default Admin
+export default PageAdmin

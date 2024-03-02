@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Public = () => {
+const PagePublic = () => {
   return (
     <>
       <h1>Página Principal Frontend</h1>
@@ -8,4 +8,4 @@ const Public = () => {
   )
 }
 
-export default Public
+export default PagePublic
