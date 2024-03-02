@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const HeaderAdmin = () => {
   return (
     <header>
       <h2>Header Admin</h2>
@@ -8,5 +8,5 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderAdmin
 
