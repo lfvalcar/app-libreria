@@ -17,6 +17,13 @@ const config: Config = {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio')
+  ],
 };
+
+
+
 export default config;
