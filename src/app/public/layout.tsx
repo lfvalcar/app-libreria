@@ -1,25 +1,24 @@
 import { IChildren } from "../interfaces/IChildren";
-import { Menu } from "@/app/components/commons/Menu";
+import { MenuPublic } from "@/app/components/public/MenuPublic";
 import { ILink } from "../interfaces/ILinks";
 import HeaderPublic from "../components/public/HeaderPublic";
-import FooterPublic from "../components/public/FooterPublic";
+import Footer from "../components/commons/Footer";
 
 export default function PublicLayout({ children }: IChildren,) {
   const links:ILink[] = [
-    { name: 'Libros', href: '/public/libros' },
-    { name: 'Generos', href: '/public/generos' },
-    { name: 'Editoriales', href: '/public/editoriales' },
-    { name: 'Nuestras Tiendas', href: '/public/tiendas' }
+    { name: 'Libros', href: '/public/libros'},
+    { name: 'Generos', href: '/public/generos'},
+    { name: 'Editoriales', href: '/public/editoriales'}
   ]
 
   return (
     <>
       <HeaderPublic/>
-      <Menu links = {links}/>
+      <MenuPublic links={links}/>
       <main>
         { children }
       </main>
-      <FooterPublic />
+      <Footer/>
     </>
   );
 }

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import HeaderAdmin from "../components/admin/HeaderAdmin";
-import FooterAdmin from "../components/admin/FooterAdmin";
 import { IChildren } from "../interfaces/IChildren";
-import { Menu } from "@/app/components/commons/Menu";
+import { MenuAdmin } from "@/app/components/admin/MenuAdmin";
 import { ILink } from "../interfaces/ILinks";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,17 +16,15 @@ export default function AdminLayout({ children }: IChildren,) {
   const links:ILink[] = [
     { name: 'Libros', href: '/admin/libros' },
     { name: 'Generos', href: '/admin/generos' },
-    { name: 'Editoriales', href: '/admin/editoriales' },
-    { name: 'Nuestras Tiendas', href: '/admin/tiendas' }
+    { name: 'Editoriales', href: '/admin/editoriales' }
   ]
   return (
     <>
-      <HeaderAdmin />
-      <Menu links = {links}/>
+      <HeaderAdmin/>
+      <MenuAdmin links = {links}/>
       <main>
         {children}
       </main>
-      <FooterAdmin />
     </>
   );
 }
