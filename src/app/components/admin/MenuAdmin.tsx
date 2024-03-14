@@ -6,6 +6,7 @@ import { AcmeLogo } from '@/app/components/commons/Icons/AcmeLogo'
 import { ILink } from '@/app/interfaces/ILinks'
 import { Button } from '@nextui-org/react'
 import InputDefault from '@/app/components/commons/InputDefault'
+import Link from 'next/link'
 
 interface Props {
   links: ILink[]
@@ -15,7 +16,7 @@ function classNames(...classes:string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const Menu:FC<Props> = ({links}) => {
+export const MenuAdmin:FC<Props> = ({links}) => {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -57,12 +58,11 @@ export const Menu:FC<Props> = ({links}) => {
               </div>
               <div className="flex space-x-4 absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <InputDefault/>
+                <Link href={'/auth/login'}>
                 <Button color="primary" href="/auth/login" variant="flat" className="hidden md:flex">
-                  Sign In
+                  Sign Out
                 </Button>
-                <Button color="primary" href="/auth/register" variant="flat" className="hidden md:flex">
-                  Sign Up
-                </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -82,8 +82,8 @@ export const Menu:FC<Props> = ({links}) => {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <Disclosure.Button
-                  key='login'
+                <Disclosure.Button
+                  key='singout'
                   as="a"
                   href='/auth/login'
                   className={classNames(
@@ -91,18 +91,7 @@ export const Menu:FC<Props> = ({links}) => {
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                 >
-                  Sign In
-                </Disclosure.Button>
-                <Disclosure.Button
-                  key='register'
-                  as="a"
-                  href='/auth/register'
-                  className={classNames(
-                    'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                >
-                  Sign Up
+                  Sign Out
                 </Disclosure.Button>
             </div>
           </Disclosure.Panel>
@@ -112,4 +101,4 @@ export const Menu:FC<Props> = ({links}) => {
   )
 }
 
-export default Menu
+export default MenuAdmin

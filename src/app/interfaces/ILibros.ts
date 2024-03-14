@@ -37,8 +37,46 @@ const ColumnLibro:IColumn[] = [
     {
         key: "thumbnailUrl",
         label: "IMAGEN"
-    },
+    }
 ];
 
-export default ColumnLibro;
+export const ColumnLibroAdmin:IColumn[] = [
+    {
+        key: "isbn",
+        label: "ISBN"
+    },
+    {
+        key: "title",
+        label: "TÍTULO"
+    },
+    {
+        key: "pageCount",
+        label: "PÁGINAS"
+    },
+    {
+        key: "precio",
+        label: "PRECIO"
+    },
+    {
+        key: "publishedDate",
+        label: "FECHA DE PUBLICACIÓN"
+    },
+    {
+        key: "shortDescription",
+        label: "DESCRIPCIÓN CORTA"
+    },
+    {
+        key: "longDescription",
+        label: "DESCRIPCIÓN LARGA"
+    },
+    {
+        key: "status",
+        label: "ESTADO"
+    },
+    {
+        key: "thumbnailUrl",
+        label: "IMAGEN"
+    }
+];
     
+export default ColumnLibro

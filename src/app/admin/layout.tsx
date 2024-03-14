@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import HeaderAdmin from "../components/admin/HeaderAdmin";
 import { IChildren } from "../interfaces/IChildren";
-import { MenuAdmin } from "@/app/components/admin/MenuAdmin";
 import { ILink } from "../interfaces/ILinks";
+import HeaderAdmin from "../components/admin/HeaderAdmin";
+import AsideAdmin from "../components/admin/AsideAdmin";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,15 +14,18 @@ export const metadata: Metadata = {
 
 export default function AdminLayout({ children }: IChildren,) {
   const links:ILink[] = [
-    { name: 'Libros', href: '/admin/libros' },
-    { name: 'Generos', href: '/admin/generos' },
-    { name: 'Editoriales', href: '/admin/editoriales' }
+    { name: 'DashBoard', href: '/admin'},
+    { name: 'Libros', href: '/admin/libros'},
+    { name: 'Generos', href: '/admin/generos'},
+    { name: 'Editoriales', href: '/admin/editoriales'},
+    {name: 'Sing In', href: '/auth/login'},
+    {name: 'Sing Up', href: '/auth/register'}
   ]
   return (
     <>
       <HeaderAdmin/>
-      <MenuAdmin links = {links}/>
       <main>
+        <AsideAdmin links={links}/>
         {children}
       </main>
     </>

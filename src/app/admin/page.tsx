@@ -1,9 +1,13 @@
 import React from 'react'
+import DashBoard from '../components/admin/DashBoard';
+import { ILink } from '../interfaces/ILinks';
 
 const PageAdmin = () => {
   return (
-    <h1>Página Principal Backend</h1>
-  )
+    <>
+      <DashBoard/>
+    </>
+  );
 }
 
 export default PageAdmin

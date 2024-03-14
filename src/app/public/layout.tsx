@@ -6,9 +6,10 @@ import Footer from "../components/commons/Footer";
 
 export default function PublicLayout({ children }: IChildren,) {
   const links:ILink[] = [
-    { name: 'Libros', href: '/public/libros'},
-    { name: 'Generos', href: '/public/generos'},
-    { name: 'Editoriales', href: '/public/editoriales'}
+    { name: 'HomePage', href: '/public', svg: ''},
+    { name: 'Libros', href: '/public/libros', svg: ''},
+    { name: 'Generos', href: '/public/generos', svg: ''},
+    { name: 'Editoriales', href: '/public/editoriales', svg: ''}
   ]
 
   return (
