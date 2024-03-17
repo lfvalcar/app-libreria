@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/public/libros/List", "src/app/components/commons/ModalForm.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/public/libros/List", "src/components/commons/ModalForm.jsx"],
   "exclude": ["node_modules"]
 }
