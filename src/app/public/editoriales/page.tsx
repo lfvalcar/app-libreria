@@ -1,12 +1,13 @@
 import React from 'react'
 
-const PageEditoriales = async () => {
+const PageTiendas = async () => {
+// const libros: ILibros[] = await getLibros()
 
   return (
     <>
-      <h1>Sección de Editoriales</h1>
+      <h1>Editoriales</h1>
     </>
   )
 }
 
-export default PageEditoriales
+export default PageTiendas

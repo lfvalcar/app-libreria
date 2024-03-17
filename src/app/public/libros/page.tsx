@@ -1,12 +1,12 @@
 import React from 'react'
-import { ILibro } from '@/app/interfaces/ILibros'
-import { getLibros } from '@/app/model/dataLibro'
-import LibrosList from '@/app/components/public/libros/List/LibrosList'
+import { ILibro } from '@/interfaces/ILibros'
+import { getAllLibros } from '@/model/dataLibros'
+import CardLibroList from '@/components/public/libros/CardLibroList'
 
 const PageLibros = async () => {
-const libros: ILibro[] = await getLibros()
+const libros: ILibro[] = await getAllLibros()
   return (
-        <LibrosList libros={libros}/>
+        <CardLibroList libros={libros}/>
   )
 }
 
