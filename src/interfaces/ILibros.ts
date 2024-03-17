@@ -4,13 +4,13 @@ export interface ILibro {
     pageCount:         number;
     publishedDate:     string;
     thumbnailUrl:      string;
-    shortDescription:  string;
-    longDescription:   string;
+    shortDescription?:  string;
+    longDescription?:   string;
     status:            string;
     precio:            number;
-    autor?:            string;
-    categoria?:        string;
-    editorial?:        string;
+    autor:            string;
+    categoria:        string;
+    editorial:        string;
 }
 
 export interface IColumn {
@@ -32,20 +32,63 @@ export const ColumnLibro:IColumn[] = [
         label: "PÁGINAS"
     },
     {
-        key: "precio",
-        label: "PRECIO"
-    },
-    {
         key: "publishedDate",
         label: "FECHA PUBLICACIÓN"
+    },
+    {
+        key: "thumbnailUrl",
+        label: "IMAGEN"
     },
     {
         key: "status",
         label: "ESTADO"
     },
     {
+        key: "precio",
+        label: "PRECIO"
+    },
+    {
+        key: "autor.nif",
+        label: "AUTOR"
+    },
+    {
+        key: "categoria.cod",
+        label: "CATEGORIA"
+    },
+    {
+        key: "editorial.nombre",
+        label: "EDITORIAL"
+    }
+];
+
+export const ColumnLibroNoRelations:IColumn[] = [
+    {
+        key: "isbn",
+        label: "ISBN"
+    },
+    {
+        key: "title",
+        label: "TÍTULO"
+    },
+    {
+        key: "pageCount",
+        label: "PÁGINAS"
+    },
+    {
+        key: "publishedDate",
+        label: "FECHA PUBLICACIÓN"
+    },
+    {
         key: "thumbnailUrl",
         label: "IMAGEN"
+    },
+    {
+        key: "status",
+        label: "ESTADO"
+    },
+    {
+        key: "precio",
+        label: "PRECIO"
     }
 ];
     

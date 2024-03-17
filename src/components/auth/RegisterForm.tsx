@@ -11,7 +11,7 @@ const RegisterForm = () => {
   const [message, setMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
   
-  const onRegisterUser = async ({username,email, password}: IRegister ) => {
+  const onRegisterUser = async ({username,email,password}: IRegister ) => {
       try{
         const registro = { username, email, password }
         const data  = await apiAuth.register(registro);

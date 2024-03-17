@@ -4,7 +4,7 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKey
 import { IColumn, ILibro } from "@/interfaces/ILibros";
 import {PlusIcon} from "./PlusIcon";
 import Link from "next/link";
-import { ModalForm } from "../../commons/ModalForm";
+import { ModalForm } from "../../commons/ModalFormLibro";
 import { ColumnLibro } from "@/interfaces/ILibros";
 
 interface Props {

@@ -18,7 +18,8 @@ export default function AdminLayout({ children }: IChildren,) {
     { name: 'Categorias', href: '/admin/categorias'},
     { name: 'Autores', href: '/admin/autores'},
     { name: 'Editoriales', href: '/admin/editoriales'},
-    { name: 'Usuarios', href: '/admin/usuarios'}
+    { name: 'Usuarios', href: '/admin/usuarios'},
+    { name: 'Sign Out', href: '/public'}
   ]
   return (
     <>

@@ -4,7 +4,7 @@ import { ILink } from "../../interfaces/ILinks";
 
 export default function PublicLayout({ children }: IChildren,) {
   const links:ILink[] = [
-    { name: 'HomePage', href: '/public'},
+    { name: 'Home', href: '/public'},
     { name: 'Libros', href: '/public/libros'},
     { name: 'Categorias', href: '/public/categorias'},
     { name: 'Autores', href: '/public/autores'},
