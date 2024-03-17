@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { IChildren } from "../interfaces/IChildren";
-import { ILink } from "../interfaces/ILinks";
-import HeaderAdmin from "../components/admin/HeaderAdmin";
-import AsideAdmin from "../components/admin/AsideAdmin";
+import { IChildren } from "../../interfaces/IChildren";
+import { ILink } from "../../interfaces/ILinks";
+import AsideAdmin from "../../components/admin/AsideAdmin";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +15,13 @@ export default function AdminLayout({ children }: IChildren,) {
   const links:ILink[] = [
     { name: 'DashBoard', href: '/admin'},
     { name: 'Libros', href: '/admin/libros'},
-    { name: 'Generos', href: '/admin/generos'},
+    { name: 'Categorias', href: '/admin/categorias'},
+    { name: 'Autores', href: '/admin/autores'},
     { name: 'Editoriales', href: '/admin/editoriales'},
-    {name: 'Sing In', href: '/auth/login'},
-    {name: 'Sing Up', href: '/auth/register'}
+    { name: 'Usuarios', href: '/admin/usuarios'}
   ]
   return (
     <>
-      <HeaderAdmin/>
       <main>
         <AsideAdmin links={links}/>
         {children}

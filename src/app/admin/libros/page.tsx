@@ -1,12 +1,11 @@
 import React from 'react'
-import ColumnLibro from '@/app/interfaces/ILibros'
-import { Tabla } from '@/app/components/commons/Tabla'
-import { ILibro } from '@/app/interfaces/ILibros'
-import { getLibros } from '@/app/model/dataLibro'
-import { TablaAdmin } from '@/app/components/admin/TablaAdmin/TablaAdmin'
+import ColumnLibro from '@/interfaces/ILibros'
+import { ILibro } from '@/interfaces/ILibros'
+import { getAllLibros } from '@/model/dataLibros'
+import { TablaAdmin } from '@/components/admin/TablaAdmin/TablaAdmin'
 
 const PageAdminLibros = async () => {
-  const libros: ILibro[] = await getLibros()
+  const libros: ILibro[] = await getAllLibros()
 
   return (
     <div className="p-4 sm:ml-64">
