@@ -30,13 +30,13 @@ const TablaLibroRow:FC<Props> = ({libro}) => {
             {libro.precio}
         </td>
         <td className="px-6 py-4">
-            {libro.autor.nif}
+            {libro.autor.id}
         </td>
         <td className="px-6 py-4">
             {libro.categoria.cod}
         </td>
         <td className="px-6 py-4">
-            {libro.editorial.nombre}
+            {libro.editorial.id}
         </td>
     </tr>
   )

@@ -9,6 +9,7 @@ const autores: IAutor[] = await getAllAutores()
 
   return (
     <>
+    <h1 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">AUTORES</h1>
       <CardAutorList autores={autores}/>
     </>
   )

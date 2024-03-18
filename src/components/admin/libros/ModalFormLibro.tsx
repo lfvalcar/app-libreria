@@ -1,17 +1,13 @@
 'use client'
 import React, { FC, useState, useEffect } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link } from "@nextui-org/react";
-import PlusIcon from "./Icons/PlusIcon";
+import PlusIcon from "../../commons/Icons/PlusIcon";
 import { IColumn, ILibro } from "@/interfaces/ILibros";
 import Cookie from "js-cookie";
 import { useForm } from "react-hook-form";
 import { insertLibro } from "@/model/dataLibros";
 
-interface Props {
-  campos: IColumn[]
-}
-
-export const ModalFormLibro: FC<Props> = ({ campos }) => {
+export const ModalFormLibro = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { register, handleSubmit } = useForm<ILibro>();
   const onInsertLibro = async ({isbn,title,pageCount,publishedDate,thumbnailUrl,shortDescription,longDescription,status,precio,autor,categoria,editorial}:ILibro) => {

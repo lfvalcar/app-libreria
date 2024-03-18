@@ -8,6 +8,7 @@ const PageCategorias = async () => {
 
   return (
     <>
+    <h1 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">CATEGORIAS</h1>
       <CardCategoriaList categorias={categorias}/>
     </>
   )

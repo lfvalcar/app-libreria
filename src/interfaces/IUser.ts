@@ -1,11 +1,49 @@
+import { IColumn } from "./ILibros";
+
 export interface IUser {
-    id?:        string;
-    email:      string;
+    id:         string;
     username:   string;
+    role:       string[];
+    isActive?:   boolean;
+    avatar?:    string
+    email:      string;
     password:   string;
-    isActive?:  boolean;
+    createdAt:  string;
+    updatedAt:  string;
     token?:     string;
-    roles?:     string[];
-    logo?:      string;
-    instagram?: string;
 }
+
+export const ColumnUsuario:IColumn[] = [
+    {
+        key: "id",
+        label: "ID"
+    },
+    {
+        key: "username",
+        label: "USERNAME"
+    },
+    {
+        key: "role",
+        label: "ROLES"
+    },
+    {
+        key: "avatar",
+        label: "AVATAR"
+    },
+    {
+        key: "email",
+        label: "EMAIL"
+    },
+    {
+        key: "password",
+        label: "PASSWORD"
+    },
+    {
+        key: "createdAt",
+        label: "CREACIÓN"
+    },
+    {
+        key: "updatedAt",
+        label: "ACTUALIZACIÓN"
+    }
+];

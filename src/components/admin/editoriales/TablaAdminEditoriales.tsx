@@ -1,22 +1,19 @@
 'use client'
 import React, {FC} from "react";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button } from "@nextui-org/react";
-import { IColumn, ILibro } from "@/interfaces/ILibros";
-import {PlusIcon} from "./PlusIcon";
-import Link from "next/link";
-import { ModalForm } from "../../commons/ModalFormLibro";
-import { ColumnLibro } from "@/interfaces/ILibros";
+import { IColumn } from "@/interfaces/ILibros";
+import { IEditorial } from "@/interfaces/IEditoriales";
 
 interface Props {
-    rows: ILibro[],
+    rows: IEditorial[],
     columns: IColumn[],
     key: string
 }
 
-export const TablaAdmin:FC<Props> = ({rows, columns, key}) => {
+export const TablaAdminEditoriales:FC<Props> = ({rows, columns, key}) => {
     return (
     <div className="flex flex-col gap-4">
-        <ModalForm campos={ColumnLibro}/>
+        {/* <ModalFormAutores campos={ColumnLibro}/> */}
         <Table aria-label="Example table with dynamic content">
             <TableHeader columns={columns}>
                 {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}

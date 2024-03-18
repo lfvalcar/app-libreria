@@ -5,21 +5,24 @@ export interface ICategoria {
     name: string
     descripcion: string
     logo: string
-    libros: string
 }
   
 const ColumnCategoria:IColumn[] = [
+    {
+        key: "cod",
+        label: "COD"
+    },
     {
         key: "name",
         label: "NOMBRE"
     },
     {
         key: "descripcion",
-        label: "DESCRIPCION"
+        label: "DESCRIPCIÓN"
     },
     {
         key: "logo",
-        label: "IMAGEN"
+        label: "LOGO"
     }
 ];
 

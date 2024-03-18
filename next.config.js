@@ -9,6 +9,10 @@ module.exports = {
             protocol: 'https',
             hostname: 's3.amazonaws.com'
           },
+          {
+            protocol: 'https',
+            hostname: 'https://iaw-libreria-images.s3.amazonaws.com'
+          },
       ],
     },
   }

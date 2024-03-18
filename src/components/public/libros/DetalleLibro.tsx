@@ -37,6 +37,10 @@ interface Props {
                   <dt className="font-medium text-gray-900">CATEGORIA</dt>
                   <dd className="mt-2 text-sm text-gray-500">{libro.categoria.name}</dd>
                 </div>
+                <div key={libro.isbn} className="border-t border-gray-200 pt-4">
+                  <dt className="font-medium text-gray-900">EDITORIAL</dt>
+                  <dd className="mt-2 text-sm text-gray-500">{libro.editorial.nombre}</dd>
+                </div>
             </dl>
           </div>
           <div>

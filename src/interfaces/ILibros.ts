@@ -48,7 +48,7 @@ export const ColumnLibro:IColumn[] = [
         label: "PRECIO"
     },
     {
-        key: "autor.nif",
+        key: "autor.id",
         label: "AUTOR"
     },
     {
@@ -56,39 +56,8 @@ export const ColumnLibro:IColumn[] = [
         label: "CATEGORIA"
     },
     {
-        key: "editorial.nombre",
+        key: "editorial.id",
         label: "EDITORIAL"
-    }
-];
-
-export const ColumnLibroNoRelations:IColumn[] = [
-    {
-        key: "isbn",
-        label: "ISBN"
-    },
-    {
-        key: "title",
-        label: "TÍTULO"
-    },
-    {
-        key: "pageCount",
-        label: "PÁGINAS"
-    },
-    {
-        key: "publishedDate",
-        label: "FECHA PUBLICACIÓN"
-    },
-    {
-        key: "thumbnailUrl",
-        label: "IMAGEN"
-    },
-    {
-        key: "status",
-        label: "ESTADO"
-    },
-    {
-        key: "precio",
-        label: "PRECIO"
     }
 ];
     

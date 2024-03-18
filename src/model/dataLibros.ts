@@ -23,6 +23,26 @@ export async function getLibrosByCategoria(cod: string){
 }
 }
 
+export async function getLibrosByEditorial(id: string){
+    
+  try{
+      const res = await fetch(`${apiBD}/libros/editoriales/${id}`, { cache: 'no-store' })
+      return res.json()
+}catch(error){
+  throw new Error('Failed to fetch data')
+}
+}
+
+export async function getLibrosByAutor(id: string){
+    
+  try{
+      const res = await fetch(`${apiBD}/libros/autores/${id}`, { cache: 'no-store' })
+      return res.json()
+}catch(error){
+  throw new Error('Failed to fetch data')
+}
+}
+
 export async function getLibroByISBN(isbn: string){
     
   try{
