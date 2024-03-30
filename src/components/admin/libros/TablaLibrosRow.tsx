@@ -1,4 +1,5 @@
 import { ILibro } from '@/interfaces/ILibros'
+import { IAutor } from '@/interfaces/IAutores'
 import React, { FC } from 'react'
 
 interface Props {

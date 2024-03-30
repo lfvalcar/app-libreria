@@ -12,7 +12,6 @@ export const ModalFormLibro = () => {
   const { register, handleSubmit } = useForm<ILibro>();
   const onInsertLibro = async ({isbn,title,pageCount,publishedDate,thumbnailUrl,shortDescription,longDescription,status,precio,autor,categoria,editorial}:ILibro) => {
     const registro = {isbn,title,pageCount,publishedDate,thumbnailUrl,shortDescription,longDescription,status,precio,autor,categoria,editorial}
-    console.log(registro)
     const token = Cookie.get('token');
     if (token) {
       await insertLibro(registro, token);
@@ -34,7 +33,7 @@ export const ModalFormLibro = () => {
       >
         <ModalContent>
           {(onClose) => (
-            <form onSubmit={ handleSubmit(onInsertLibro) } noValidate>
+            <form onSubmit={handleSubmit(onInsertLibro)} noValidate>
               <ModalHeader className="flex flex-col gap-1">Nueva inserción</ModalHeader>
               <ModalBody>
                   <input 
@@ -133,35 +132,35 @@ export const ModalFormLibro = () => {
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <input 
-                  { ...register('autor', {
-                    required:'Autor es requerido'
+                  { ...register('autor.nif', {
+                    required:'NIF autor es requerido'
                   })}
                   id='autor'
                   name='autor'
                   type="text"
-                  placeholder='AUTOR'
+                  placeholder='NIF AUTOR'
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <input 
-                  { ...register('categoria', {
-                    required:'Categoria publicación es requerido'
+                  { ...register('categoria.cod', {
+                    required:'Codigo categoria es requerido'
                   })}
                   id='categoria'
                   name='categoria'
                   type="text"
-                  placeholder='CATEGORIA'
+                  placeholder='CÓDIGO CATEGORIA'
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <input 
-                  { ...register('editorial', {
-                    required:'Editorial es requerido'
+                  { ...register('editorial.id', {
+                    required:'ID editorial es requerido'
                   })}
                   id='editorial'
                   name='editorial'
                   type="text"
-                  placeholder='EDITORIAL'
+                  placeholder='ID EDITORIAL'
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />

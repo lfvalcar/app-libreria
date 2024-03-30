@@ -1,16 +1,20 @@
+import { IAutor } from "./IAutores";
+import { ICategoria } from "./ICategorias";
+import { IEditorial } from "./IEditoriales";
+
 export interface ILibro {
-    isbn:              string;
-    title:             string;
-    pageCount:         number;
-    publishedDate:     string;
-    thumbnailUrl:      string;
-    shortDescription?:  string;
-    longDescription?:   string;
-    status:            string;
-    precio:            number;
-    autor:            string;
-    categoria:        string;
-    editorial:        string;
+    isbn:                 string;
+    title:                string;
+    pageCount:            number;
+    publishedDate:        string;
+    thumbnailUrl:         string;
+    shortDescription?:    string;
+    longDescription?:     string;
+    status:               string;
+    precio:               number;
+    autor:                IAutor;
+    categoria:        ICategoria;
+    editorial:        IEditorial;
 }
 
 export interface IColumn {
