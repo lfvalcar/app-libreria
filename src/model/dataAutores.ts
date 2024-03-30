@@ -1,12 +1,10 @@
 import { IAutor } from "@/interfaces/IAutores";
 import axios from "axios";
 
-const apiBD = 'http://localhost:3001/api';
-
 export async function getAllAutores(){
     
   try{
-        const res = await fetch(`${apiBD}/autores`, { cache: 'no-store' })
+        const res = await fetch(`${process.env.API_PREFIX}/autores`, { cache: 'no-store' })
         return res.json()
   }catch(error){
     throw new Error('Failed to fetch data')
@@ -16,7 +14,7 @@ export async function getAllAutores(){
 export async function insertAutor(autor:IAutor, token:string) {
   try{
     const response = await axios.post(
-      'http://localhost:2401/api/autores', 
+      'http://localhost:10002/api/autores', 
       autor,
       { headers:{Authorization: `Bearer ${token}`}}
       );
